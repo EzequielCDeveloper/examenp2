@@ -1,0 +1,99 @@
+# ==============================================================================
+# Monorepo / Multi-project Root .gitignore
+# Projects:
+#   1. movil       - Expo / React Native (Android)
+#   2. smartwatch  - Expo / React Native (WearOS / Smartwatch)
+#   3. scraper     - Node.js / Express / TypeScript Cloud Microservice
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# Dependencies & Package Managers
+# ------------------------------------------------------------------------------
+node_modules/
+.pnp/
+.pnp.js
+
+# ------------------------------------------------------------------------------
+# Build & Distribution Outputs
+# ------------------------------------------------------------------------------
+dist/
+build/
+web-build/
+out/
+*.tsbuildinfo
+
+# ------------------------------------------------------------------------------
+# Expo & React Native (movil & smartwatch)
+# ------------------------------------------------------------------------------
+.expo/
+expo-env.d.ts
+.metro-health-check*
+
+# ------------------------------------------------------------------------------
+# Android & Native Build Artifacts
+# ------------------------------------------------------------------------------
+.gradle/
+**/android/.gradle/
+**/android/build/
+**/android/.kotlin/
+**/android/.cxx/
+local.properties
+**/android/local.properties
+gradle/gradle-daemon-jvm.properties
+
+# Native credentials, keys, and bundles
+*.jks
+*.keystore
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.pem
+*.orig.*
+*.hprof
+*.apk
+*.aab
+*.jsbundle
+
+# ------------------------------------------------------------------------------
+# Environment Variables & Secrets
+# ------------------------------------------------------------------------------
+.env
+.env*.local
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+!.env.example
+
+# ------------------------------------------------------------------------------
+# Logs & Diagnostic Dumps
+# ------------------------------------------------------------------------------
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ------------------------------------------------------------------------------
+# IDEs & System Metadata
+# ------------------------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+
+# JetBrains / IntelliJ / Android Studio
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json

@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: stj-miniscraper
+    runtime: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: PORT
+        value: 10000
